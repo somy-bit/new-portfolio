@@ -1,0 +1,161 @@
+
+[
+    {
+        "id": 1,
+        "view": "/images/trellov.png",
+        "image": "/images/trelloshow.png",
+        "link": "https://trello-clone-five-sepia.vercel.app",
+        "title": "Trello clone",
+        "description": "Simple to do list",
+        "techs": [
+            {
+                "name": "react",
+                "icon": "devicon-react-original"
+            },
+            {
+                "name": "tailwindCss",
+                "icon": "devicon-tailwindcss-original"
+            },
+            {
+                "name": "nodejs",
+                "icon": "devicon-nodejs-plain-wordmark"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "devicon-typescript-plain"
+            },
+            {
+                "icon": "devicon-appwrite-original",
+                "name": "Appwrite"
+            }
+        ],
+        "properties": [
+            "This project is a Trello-style task management board where users can create, organize, and track their work visually. The interface is built around draggable columns (e.g., To Do, In Progress, Done), allowing tasks to be moved seamlessly between stages via drag-and-drop. Each column acts as a category or workflow stage, and new columns can be added dynamically, making the board adaptable for different projects",
+            "Within each column, users can add tasks with up to three levels of detail — for example: a main title, a short description, and an extended note or checklist. Each task supports image attachments, enabling users to visually represent items such as product mockups, reference screenshots, or design drafts. Tasks are displayed in a card format that shows essential information at a glance, while clicking a card reveals its detailed view.",
+            "The app also includes a search feature that allows users to quickly filter tasks across all columns. This search works on task titles, descriptions, and tags, ensuring that even in large boards, finding the right task is effortless. Combined with the drag-and-drop reordering and customizable workflow, the project delivers a smooth, intuitive, and highly visual way to manage tasks and projects."
+        ]
+    },
+    {
+        "id": 2,
+        "view": "/images/airbnbv.png",
+        "image": "/images/airbnbshow.png",
+        "link": "https://airbnb-clone-ntvn-5akjyi7ws-smmoosavismgmailcoms-projects.vercel.app/",
+        "title": "airbnb clone",
+        "description": "react app with mapbox",
+        "techs": [
+            {
+                "icon": "devicon-nextjs-plain",
+                "name": "nextjs"
+            },
+            {
+                "icon": "devicon-mapbox-original",
+                "name": "mapbox"
+            },
+               {
+                "name": "tailwindCss",
+                "icon": "devicon-tailwindcss-original"
+            }
+        ],
+        "properties": [
+            "Airbnb clone is a web application that lets users search for available rental properties by location and date, similar to Airbnb. It features a calendar-based search interface where users select check-in and check-out dates along with the number of guests. The app then filters and displays listings that match the criteria. Each listing includes details like photos, description, price, and ratings. Users can browse results on a list and simultaneously see them pinned on an interactive map, which helps visualize the properties' geographic locations for easier decision-making.",
+            "The app integrates a dynamic map component powered by Mapbox or Google Maps, showing markers for each available rental based on search results. Clicking on a marker reveals more info about the property through popups, enhancing the browsing experience. This combination of calendar search and map visualization closely mimics core Airbnb features, providing users an intuitive way to explore and book accommodations while balancing location context and availability."
+        ]
+    },
+    {
+        "id": 3,
+        "view": "/images/onlineshop.png",
+        "image": "/images/onlineshow.png",
+        "link": "https://onlineshop-ajbe.vercel.app/",
+        "title": "Online Shop",
+        "description": "an online shope model",
+        "techs": [
+          {
+                "name": "react",
+                "icon": "devicon-react-original"
+            },
+            {
+                "name": "tailwindCss",
+                "icon": "devicon-tailwindcss-original"
+            },
+            {
+                "name": "nodejs",
+                "icon": "devicon-nodejs-plain-wordmark"
+            }
+         
+           ,
+           
+            {
+                "name": "sanity",
+                "icon": "devicon-sanity-plain"
+            }
+        ],
+        "properties": [
+            "This application is a full-featured online shop model that demonstrates the core workflows of a modern e-commerce platform. On the customer side, users can browse products organized into categories, view detailed product pages, and explore similar items through recommendation lists. Each item can be added to a shopping basket, where users have full control to update quantities or remove items entirely. The basket dynamically reflects the total items and cost, leading into a checkout flow where users confirm their purchase.",
+            "On the backend, the shop uses Sanity as a headless CMS to store and manage product data. Sanity provides a structured database where items, categories, and related product links can be easily created and maintained. This makes the platform flexible and scalable, as products or categories can be updated in real-time without redeploying the frontend.",
+            "The application also includes an admin interface for managing shop content. Admins can log in to add new products, edit descriptions, update stock, or categorize items directly within Sanity’s dashboard. This headless approach separates content management from the customer-facing UI, ensuring that the shop is maintainable and easy to extend.",
+            "Together, the combination of a customer-friendly shopping flow and a powerful Sanity-powered backend creates a strong foundation for a production-ready e-commerce experience, covering everything from browsing to checkout, and from content management to database integration."
+        ]
+    },
+    {
+        "id": 4,
+        "view": "/images/assistlyv.png",
+        "image": "/images/aibotshow.png",
+        "link": "https://myassisstant.vercel.app/",
+        "title": "AI Chat assistant",
+        "description": "create your Ai bot",
+        "techs": [
+             {
+                "name": "postgresql",
+                "icon": "devicon-postgresql-plain"
+            },
+            {
+                "name": "tailwindCss",
+                "icon": "devicon-tailwindcss-original"
+            },
+            {
+                "name": "react",
+                "icon": "devicon-react-original"
+            },
+            {
+                "name": "nodejs",
+                "icon": "devicon-nodejs-plain-wordmark"
+            }
+        ],
+        "properties": [
+            "This application is a custom chatbot builder that lets users create AI-powered assistants for their websites. After logging in, a user can set up a chatbot by providing context, instructions, or specific information about their business or site. The chatbot is then trained to act as a helpful assistant that can answer visitor questions, guide navigation, or provide support.",
+            "Once created, the app generates a unique URL and embed code for the chatbot. Users can easily copy this URL and integrate the assistant into their own website, enabling visitors to interact with the bot in real time. This makes the process of adding a smart conversational agent to any site simple and accessible, without needing to build complex infrastructure.",
+            "The system is powered by OpenAI, giving each chatbot natural language understanding and conversational abilities. By combining a simple admin interface with advanced AI, the platform bridges the gap between powerful technology and practical usability. Site owners can quickly deploy a personalized chatbot that enhances user experience and engagement on their web pages."
+        ]
+    },
+    {
+        "id": 5,
+        "view": "/images/skillswapv.png",
+        "image": "/images/skillswap.png",
+        "link": "#",
+        "title": "Skill Swap",
+        "description": "Find your mentor",
+        "techs": [
+            {
+                "name": "tailwindCss",
+                "icon": "devicon-tailwindcss-original"
+            },
+            {
+                "name": "react",
+                "icon": "devicon-react-original"
+            },
+             {
+                "name": "nodejs",
+                "icon": "devicon-nodejs-plain-wordmark"
+            },
+               {
+                "icon": "devicon-firebase-plain",
+                "name": "firebase"
+            }
+        ],
+        "properties": [
+            "SkillSwap is a micro-mentorship platform designed to connect users who want to share or gain skills. Each user has a personal profile where they can showcase their expertise, interests, and availability for mentorship sessions. Users can browse other profiles, view public information, and book sessions with mentors who match their learning goals.",
+            "The app supports scheduling through an interactive calendar that displays available time slots. Users can set their own availability, and mentees can pick open slots to book sessions. Notifications alert users when sessions are booked or updated, keeping both mentors and mentees informed.",
+            "On the backend, SkillSwap uses Firebase for secure data storage and Clerk for authentication. Profiles, availability, sessions, and messages are organized in collections, ensuring smooth data flow and secure access. The platform prioritizes usability, allowing easy profile editing, session management, and seamless communication between users."
+        ]
+    }
+]

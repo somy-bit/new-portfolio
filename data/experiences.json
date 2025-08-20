@@ -1,0 +1,36 @@
+[
+    {
+        "title":"Administrative Assistant",
+        "company":"Beyaz Ev",
+        "location":"Istanbul ,Turkey",
+        "date":"FEB 2023-FEB 2024",
+        "accomplishments":[
+            "Provided administrative support including scheduling and coordinating meetings,  responding to emails and phone calls, and document preparation for real estate transactions",
+            "Communicated effectively with clients, agents, and teammates to ensure smooth operations",
+            "Proactively centralized company data by creating a structured internal database system and Excel form, improving data access and keeping records more efficiently"
+        ]
+    },
+     {
+        "title":"Junior Web Developer",
+        "company":"Zee Pay",
+        "location":"Istanbul ,Turkey",
+        "date":"DEC 2021-DEC 2022",
+        "accomplishments":[
+            "Assisted in developing and maintaining main website using JavaScript, HTML, CSS, and React",
+            "Collaborated with senior developers to implement UI components, fix bugs, and optimize frontend performance",
+            "Participated in code reviews, team meetings, and feature planning as part of a team"
+        ]
+    },
+      {
+        "title":"Website Administrator",
+        "company":"ilikephp.ir",
+        "location":"Iran ,Tehran (remote)",
+        "date":"MAR 2018-MAR 2019",
+        "accomplishments":[
+            "Managed and updated website content, ensuring consistent layout, accessibility, and performance",
+            "Monitored site interactions, performed routine maintenance, and resolved technical issues in a timely manner",
+            "Handled basic frontend edits using HTML, CSS, and PHP, and coordinated with developers for larger updates",
+            "Improved site structure and content organization to enhance user experience and SEO"
+        ]
+    }
+]
