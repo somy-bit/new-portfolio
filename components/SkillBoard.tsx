@@ -1,6 +1,5 @@
 'use client'
 
-import { Key } from 'lucide-react'
 import React, { useState } from 'react'
 
 function SkillBoard({ title, date, company, accomplishments }: { title: string, date: string, company: string, accomplishments?: string[] }) {

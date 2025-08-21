@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Card from './Card'
 import Carousel from './Carousel'
 import { ProjectInfo } from '@/app/api/info/route';
 
@@ -12,7 +11,7 @@ function Projects() {
   useEffect(() => {
 
     async function fetchData() {
-      const data = await fetch(`/api/info`, { cache: 'no-store' });
+      const data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000"}/api/info`, { cache: 'no-store' });
       let itemsArr: ProjectInfo[] = [];
       if (data.status == 500) {
         console.error("failed to fetch data")
@@ -37,8 +36,6 @@ function Projects() {
         items={items}
         autoplayInterval={3000}
 
-   
-     
       />
     </div>
   )

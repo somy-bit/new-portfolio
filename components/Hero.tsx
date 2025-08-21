@@ -3,25 +3,31 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Typewriter from './Typewriter'
-import { LinkedinIcon, MapPinIcon, MoonIcon } from 'lucide-react';
+import { MapPinIcon } from 'lucide-react';
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 
 
+
 function Hero() {
 
     const [isVisible, setIsVisible] = useState(false);
-    const whoami: string[] = [
-        'Web Developer',
-        'Data analyst',
-        'Fronted Developer',
-        'React Developer',
-        'UI/UX Designer',
-        'Backend Developer',
-    ]
+    const [whoami, setWhoami] = useState<string[]>([])
 
-
+    useEffect(() => {
+        async function fetchInfo() {
+            try {
+                const res = await fetch('/api/profile');
+                const data = await res.json();
+                
+                setWhoami(data.title)
+            } catch (error) {
+                console.log("error fetching whoami data", error)
+            }
+        }
+        fetchInfo();
+    },[])
 
 
 
@@ -31,6 +37,8 @@ function Hero() {
 
         return () => clearTimeout(timeout)
     }, [])
+
+
     return (
         <section className='snap-start h-screen  flex mx-auto items-center justify-center  text-gray-700 overflow-hidden 
     w-full [background-image:repeating-linear-gradient(0deg,#F3EFEE_0_2px,transparent_3px_75px),repeating-linear-gradient(90deg,#F3EFEE_0_2px,transparent_3px_75px)] 
@@ -46,7 +54,7 @@ function Hero() {
                     </h1>
                     <div className='flex flex-row w-screen justify-center items-baseline space-x-4 mt-4'>
                         <p className='mt-4 text-center text-lg max-w-md dark:text-gray-200'>Hey I'm a  </p>
-                        <Typewriter texts={whoami} />
+                        {whoami.length > 0 && <Typewriter texts={whoami} />}
                     </div>
 
                     <div className='flex items-center justify-center dark:text-gray-200 space-x-2 mt-4'>

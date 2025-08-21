@@ -1,15 +1,14 @@
-import React from 'react'
-import fs from 'fs'
-import path from 'path'
+
 import { NextRequest, NextResponse } from 'next/server'
+import {client} from '@/lib/sanityClient'
 
 export type ProjectInfo = {
-    id: number;
+    _id: number;
     title: string;
     description: string;
     techs: Tech[];
-    view: string;
-    image: string;
+    viewUrl: string;
+    imageUrl: string;
     link: string;
     properties:string[];
 }
@@ -19,23 +18,38 @@ export type Tech = {
     icon: string;
 };
 
-export  function GET(req: NextRequest) {
+export async function GET(req: NextRequest) {
 
-    const filePath = path.join(process.cwd(), 'data', 'data.json')
 
     try {
-        const data = fs.readFileSync(filePath, 'utf8')
-        const jsonData: ProjectInfo[] = JSON.parse(data)
+        const query =`
+    *[_type == "project"]{
+      _id,
+      title,
+      description,
+      link,
+      "viewUrl": view.asset->url,
+      "imageUrl": image.asset->url,
+      techs[]{
+        name,
+        icon
+      },
+      properties[]
+    } | order(title asc)
+  `
 
-        console.log("jsonData", jsonData)
+        const products = await client.fetch(query) as ProjectInfo[]
+        
+
         const field = req.nextUrl.searchParams?.get('field')
         const value = req.nextUrl.searchParams?.get('value')
         if (!field || !value) {
-            return NextResponse.json(jsonData)
+            return NextResponse.json(products)
         }
 
         if (field && value) {
-            const filtered = jsonData.filter(item => String((item as any)[field]) === value)
+            const filtered = products.filter(item => (item._id).toString() === value)
+            
             return NextResponse.json(filtered)
         }
        

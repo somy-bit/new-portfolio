@@ -78,15 +78,15 @@ export default function Carousel({
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%] px-2"
+              className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] xl:flex-[0_0_25%] px-2"
             >
               <Card
-                image={item.image}
+                imageUrl={item.imageUrl}
                 title={item.title}
                 description={item.description}
                 link={item.link}
-                id={item.id}
-                view={item.view}
+                _id={item._id}
+                viewUrl={item.viewUrl}
                 techs={item.techs}
                 properties={item.properties}
               />

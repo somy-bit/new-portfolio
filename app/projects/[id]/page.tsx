@@ -13,11 +13,11 @@ async function ProjectPage({ params }: Props) {
   const { id } = params;
 
 
-  const info = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/info?field=id&value=${id}`, { cache: 'no-store' });
+  const info = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/info?field=_id&value=${id}`, { cache: 'no-store' });
   const data: ProjectInfo[] = await info.json();
 
   const item = data[0];
-  console.log("item", item);
+ 
   return (
     <div className='flex w-full flex-col max-w-6xl mx-auto'>
       <h1 className='p-5 text-4xl bg-gradient-to-r from-[#548189] via-[#D9D9D9] to-[#326045] bg-clip-text text-transparent'>{item.title}</h1>
@@ -25,7 +25,7 @@ async function ProjectPage({ params }: Props) {
              hover:bg-[#037A7F] font-semibold md:max-w-46'>Visit Website</a>
       <div className='w-full p-10 mt-10 '>
         <Image
-          src={item.view}
+          src={item.viewUrl}
           alt='Project View'
           width={1000}
           height={500}

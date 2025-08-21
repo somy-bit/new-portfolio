@@ -19,6 +19,7 @@ function Skill() {
       try {
         const res = await fetch('/api/experience');
         const data = await res.json();
+        console.log("data", data)
 
         setPositions(data)
       } catch (error) {

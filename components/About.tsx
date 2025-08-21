@@ -2,8 +2,15 @@
 import React from 'react'
 import FadeIn from './FadeIn'
 import FloatingDiv from './FloatingDiv'
+import { client } from '@/lib/sanityClient'
 
-function About() {
+async function About() {
+
+  const about = await client.fetch(`*[_type == "profile"][0]{
+    about
+  }`)
+  console.log("about", about)
+
   return (
     <section id='about' className='pt-5 pb-24 md:max-w-7xl mx-auto  flex flex-col  md:space-y-12  w-full mt-25  text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-800'>
 
@@ -16,7 +23,7 @@ function About() {
           </FadeIn>
           <FadeIn duration={3} yOffset={70} className='mt-8 flex w-full  items-center justify-center'>
             <p className='text-lg '>
-              Welcome to my portfolio! I’m a passionate full-stack web developer with 7 years of freelancing experience, skilled in React, Node, PHP, Next.js, and React Native. I love creating thoughtful, user-friendly solutions. I’m a quick learner who never stops exploring new technologies, and I bring a tenacious, can-do spirit to every project—solving problems creatively and pushing through challenges until the job is done right.
+              {about.about}
             </p>
           </FadeIn>
         </div>
