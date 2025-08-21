@@ -19,6 +19,7 @@ function ProjectPage() {
       const data: ProjectInfo[] = await info.json();
       setItem(data[0])
     }
+    fetchData();
   }, [])
 
 
