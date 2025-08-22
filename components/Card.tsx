@@ -10,7 +10,7 @@ function Card({imageUrl,title,description,_id}: ProjectInfo) {
   return (
     <div className='bg-[#B6FCFF]/50  w-full max-w-70 mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300'>
         <div className='flex flex-col items-center space-y-2'>
-            <Image src={imageUrl} width={100} height={60} className='object-contain w-full rounded-t-lg h-56 bg-gray-400 ' alt='project image' />
+            <Image src={imageUrl} width={600} height={600} className='object-cover w-full rounded-t-lg h-50 bg-gray-400 ' alt='project image' />
             <div className='flex w-full flex-col space-y-4 px-3 pb-4'>
                 <h2 className='text-lg font-semibold text-left w-full text-gray-800 '>{title}</h2>
                 <p className='pb-5 text-sm text-gray-800'>{description}</p>
